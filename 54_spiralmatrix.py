@@ -4,11 +4,9 @@ class Solution(object):
         :type matrix: List[List[int]]
         :rtype: List[int]
         """
-        m, n = len(matrix), len(matrix[0])
         ans = []
-        while matrix != []:
-            ans += matrix[0]
-            del matrix[0]
+        while matrix:
+            ans += matrix.pop(0)
             matrix[:] = list(zip(*matrix))[::-1]
         return  ans
                 
