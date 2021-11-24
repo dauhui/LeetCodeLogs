@@ -4,6 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        # wrong answer
         ans = 0
         multi = [i for i in range(len(nums))]
         for i in range(len(nums)):
