@@ -5,14 +5,20 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        table_s, table_t = {}, {}
         if len(s) != len(t): return False
-        for cha in s:
-            if cha in t:
-                t = t.replace(cha,"",1)
+        for chr in s:
+            if chr in table_s:
+                table_s[chr] += 1
             else:
-                return False
-        return True
+                table_s[chr] = 1
+        for chr in t:
+            if chr in table_t:
+                table_t[chr] += 1
+            else:
+                table_t[chr] = 1
+        return table_s == table_s
 
-A = "c❦at"
-B = "cta❦"
+A = "rat"
+B = "car"
 print(Solution.isAnagram(Solution, A, B))
