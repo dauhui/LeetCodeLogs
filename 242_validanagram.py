@@ -17,7 +17,7 @@ class Solution(object):
                 table_t[chr] += 1
             else:
                 table_t[chr] = 1
-        return table_s == table_s
+        return table_s == table_t
 
 A = "rat"
 B = "car"
