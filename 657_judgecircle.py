@@ -4,13 +4,7 @@ class Solution(object):
         :type moves: str
         :rtype: bool
         """
-        table = {"U":0, "D":0, "R":0, "L":0}
-        for dir in moves:
-            if dir in table:
-                table[dir] += 1
-        if table["U"] == table["D"] and table["R"] == table["L"]:
-            return True
-        return False
+        return moves.count("U") == moves.count("D") and moves.count("R") == moves.count("L")
 
-A = "UDR"
+A = "UDRL"
 print(Solution.judgeCircle(Solution, A))
