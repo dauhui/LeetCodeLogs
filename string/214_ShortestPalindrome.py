@@ -4,8 +4,11 @@ class Solution:
         put "in front of" the string to make palindrome
         
         ref from sol
-        aacecaaa ->    aaacecaa - x
-                    (a)aacecaa  - v
+                aacecaaa
+                 <--r-->
+               <--r-->
+             <--r-->
+           ...
         """
         r = s[::-1]
         for i in range(len(r) + 1):
